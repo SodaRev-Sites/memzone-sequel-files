@@ -1,0 +1,68 @@
+/* fready.css */
+body {
+    background-color: #f0f0f0;
+    color: #000000;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 36px;
+    color: #ff0000;
+    text-shadow: 2px 2px #888888;
+    border: 2px dashed #000000;
+    padding: 10px;
+}
+
+a {
+    color: #0000ff;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #ff00ff;
+}
+
+a:visited {
+    color: #800080;
+}
+
+img {
+    border: 3px solid #000000;
+    margin-top: 20px;
+}
+
+emp {
+    display: block;
+    font-size: 18px;
+    color: #008000;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+marquee {
+    font-size: 24px;
+    color: #ff0000;
+    margin-bottom: 20px;
+}
+
+.blink {
+    animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+@font-face {
+    font-family: 'PixelFont';
+    src: url('pixel-font.woff') format('woff');
+}
+
+body, h1, emp, a, marquee {
+    font-family: 'PixelFont', 'Courier New', Courier, monospace;
+}

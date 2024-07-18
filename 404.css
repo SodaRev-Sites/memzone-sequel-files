@@ -1,0 +1,74 @@
+/* General Reset and Body Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: radial-gradient(circle, #000 40%, #001f3f); /* Enhanced background */
+    color: #fff; /* White text color for contrast */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Container Styling */
+.container {
+    max-width: 600px;
+    padding: 20px;
+    border: 2px solid #ff4500; /* Orange border for emphasis */
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.8); /* Slightly transparent background */
+    box-shadow: 0 0 15px rgba(255, 69, 0, 0.7); /* Neon glow effect */
+}
+
+/* Heading Styling */
+.container h1 {
+    font-size: 3em;
+    color: #ff4500; /* Bright orange color */
+    margin-bottom: 20px;
+    animation: flicker 1.5s infinite alternate; /* Flickering effect */
+}
+
+/* Image Styling */
+.container img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #ff4500; /* Orange border */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 69, 0, 0.5); /* Soft glow */
+}
+
+/* Audio Styling (hidden) */
+audio {
+    display: none;
+}
+
+/* Flickering Animation */
+@keyframes flicker {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container h1 {
+        font-size: 2em;
+    }
+
+    .container {
+        padding: 10px;
+    }
+}

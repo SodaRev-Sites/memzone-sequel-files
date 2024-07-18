@@ -1,0 +1,141 @@
+/* General Reset and Body Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive; /* Arcade-style font */
+}
+
+body {
+    background: radial-gradient(circle, #000 40%, #001f3f); /* Enhanced background */
+    color: #fff; /* White text color for contrast */
+    overflow: hidden; /* Prevent scrollbars */
+    text-align: center;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Funniest Text Styling */
+.funniest-text {
+    z-index: 10;
+    padding: 20px;
+    border: 2px solid #00f; /* Neon blue border */
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.8); /* Slightly transparent background */
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.7); /* Neon glow effect */
+    max-width: 80%;
+    margin: 0 auto;
+    text-align: left; /* Left-align for better readability */
+}
+
+.funniest-text h1 {
+    font-size: 2.5em;
+    color: #f0f; /* Neon purple color */
+    margin-bottom: 20px;
+    text-align: center; /* Center-align the heading */
+}
+
+.funniest-text a {
+    color: #0f0; /* Neon green color for the link */
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.funniest-text a:hover {
+    text-decoration: underline;
+    color: #0ff; /* Change color on hover */
+}
+
+.funniest-text p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+/* FNAF Images Styling */
+.fnaf-images {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    z-index: 10;
+    flex-wrap: wrap; /* Wrap images on smaller screens */
+}
+
+.fnaf-images img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    animation: bounce 2s infinite ease-in-out; /* Bouncing effect */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Add shadow to images */
+}
+
+/* Bouncing Animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Floating and Falling Alphabet Words */
+@keyframes float {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+}
+
+.floating-letters {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Ensure it does not interfere with other content */
+    overflow: hidden;
+    z-index: 0;
+}
+
+.floating-letters span {
+    position: absolute;
+    font-size: 2em;
+    color: #0ff; /* Neon cyan color */
+    white-space: nowrap;
+    user-select: none;
+    animation: float 10s linear infinite;
+    animation-delay: calc(-5s * var(--i)); /* Staggered animation */
+    animation-timing-function: ease-in-out; /* Smooth animation */
+}
+
+.floating-letters span:nth-child(odd) {
+    color: #f0f; /* Neon purple color for odd elements */
+}
+
+/* Creating the Floating Letters */
+.floating-letters span:nth-child(1) { --i: 1; }
+.floating-letters span:nth-child(2) { --i: 2; }
+.floating-letters span:nth-child(3) { --i: 3; }
+.floating-letters span:nth-child(4) { --i: 4; }
+.floating-letters span:nth-child(5) { --i: 5; }
+.floating-letters span:nth-child(6) { --i: 6; }
+.floating-letters span:nth-child(7) { --i: 7; }
+.floating-letters span:nth-child(8) { --i: 8; }
+.floating-letters span:nth-child(9) { --i: 9; }
+.floating-letters span:nth-child(10) { --i: 10; }
+
+/* Add more spans for more letters */
