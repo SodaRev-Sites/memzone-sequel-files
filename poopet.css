@@ -1,0 +1,42 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+#musicBox, #windButton {
+    width: 200px;
+    cursor: pointer;
+    margin: 20px;
+}
+
+#message {
+    font-size: 2em;
+    margin-top: 20px;
+    color: #333;
+}
+
+#timer {
+    font-size: 2em;
+    margin-top: 20px;
+    color: #333;
+}
+
+#confettiCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+#circleCanvas {
+    position: absolute;
+    bottom: 20px;
+    width: 150px;
+    height: 150px;
+}
